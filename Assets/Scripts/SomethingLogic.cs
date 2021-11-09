@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovementLogic : MonoBehaviour
 {
+    // test halo ini programmer 1
+
     [SerializeField] private DashValueLogic _dashValue;
     [SerializeField] private float _moveSpeed = 5;
     [SerializeField] private float _dashSpeed = 20;
