@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Fillbar : MonoBehaviour
 {
 	public Slider slider1;
-    private int maxDash = 100;
-    private int currentDash;
+    public int maxDash = 100;
+    public int currentDash;
 
     private WaitForSeconds regenTime = new WaitForSeconds(0.1f);
     private Coroutine regenerate;
@@ -21,7 +21,7 @@ public class Fillbar : MonoBehaviour
 
     private void Start()
     {
-        currentDash = maxDash;
+        currentDash = maxDash;  
         slider1.maxValue = maxDash;
         slider1.value = maxDash;
     }
@@ -31,7 +31,8 @@ public class Fillbar : MonoBehaviour
         if(currentDash - nilai >= 0)
         {
             currentDash -= nilai;
-            slider1.value = currentDash;
+            Debug.Log(currentDash);
+            slider1.value = currentDash;      
             if(regenerate != null)
             {
                 StopCoroutine(regenerate);
